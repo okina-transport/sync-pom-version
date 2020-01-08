@@ -27,7 +27,7 @@ function main (pomPath, packagePath) {
   console.log('found version ' + packageVersion + ' in package.json');
 
   if (pomVersion.endsWith('-SNAPSHOT')) {
-      pomVersion.replace('-SNAPSHOT', '');
+      pomVersion = pomVersion.replace('-SNAPSHOT', '');
       console.log('Removed -SNAPSHOT from pom version, as it does not complies with npm versioning system.');
   }
 
